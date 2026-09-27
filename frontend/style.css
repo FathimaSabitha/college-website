@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HERO
+========================= */
+
+#hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+#hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+#hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.05) 45%,
+        rgba(0,0,0,0.25)
+    );
+    z-index: 1;
+}
+
+
+
+#header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94%;
+    max-width: 1450px;
+    min-height: 105px;
+    padding: 12px 18px;
+    background: rgba(255,255,255,0.72);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 26px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    z-index: 2;
+}
+
+
+
+#logo {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 190px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,0.82);
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+#top-header {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 5px;
+}
+
+#top-header a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+    transition: 0.25s;
+}
+
+#top-header a:hover {
+    color: #e21b23;
+}
+
+#search {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    font-size: 20px;
+    color: #444;
+    cursor: pointer;
+}
+
+
+#login-button {
+    padding: 9px 15px;
+    border-radius: 50px;
+    background: #e21b23 !important;
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(226,27,35,0.25);
+}
+
+
+#main-header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+#main-header a {
+    text-decoration: none;
+    color: #222;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 16px;
+    border-radius: 50px;
+    transition:
+        background 0.25s,
+        color 0.25s,
+        transform 0.25s;
+}
+
+#main-header a:hover {
+    background: rgba(255,255,255,0.8);
+    color: #e21b23;
+    transform: translateY(-2px);
+}
+
+#main-header span {
+    font-size: 12px;
+}
+
+
+#admission-button {
+    background: #e21b23 !important;
+    color: white !important;
+    padding: 12px 22px !important;
+    margin-left: 5px;
+    box-shadow: 0 7px 20px rgba(226,27,35,0.25);
+}
+
+#admission-button:hover {
+    background: #c9141b !important;
+    transform: translateY(-2px);
+}
+
+
+#hero-content {
+    position: absolute;
+    left: 8%;
+    bottom: 14%;
+    z-index: 2;
+    max-width: 600px;
+    color: white;
+}
+
+.hero-small {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+#hero-content h1 {
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+    text-shadow: 0 5px 25px rgba(0,0,0,0.2);
+}
+
+#hero-content h1 span {
+    color: #ff4650;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 450px;
+    margin-bottom: 28px;
+    color: rgba(255,255,255,0.9);
+}
+
+
+#explore-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #222;
+    background: rgba(255,255,255,0.82);
+    padding: 13px 18px 13px 22px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+#explore-button span {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e21b23;
+    color: white;
+    font-size: 18px;
+}
+
+#explore-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
